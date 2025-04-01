@@ -23,15 +23,14 @@ Engineering change orders can be created:
 Create ECO
 ==========
 
-To create a new |ECO|, begin by navigating to the *PLM* app. Then, select the |ECO| type card that
-will be used to track the progress of the change. On the :guilabel:`Engineering Change Orders` page,
-click the :guilabel:`New` button in the top-left corner.
+To create a new |ECO|, begin by navigating to the **PLM** app. Then, select the |ECO| type that
+should be used to track the progress of the change. On the :guilabel:`Engineering Change Orders`
+page, click the :guilabel:`New` button in the top-left corner.
 
 .. note::
-   Learn how to create new :ref:`ECO types <plm/eco/eco-type>` to categorize and organize change
-   orders. Doing so ensures employees only view the |ECOs| related to their responsibilities,
-   whether it involves new product introductions, targeted product line updates, or regulatory
-   compliance fulfillment.
+   :doc:`ECO types <eco_type>` categorize and organize change orders. Doing so can ensure that
+   employees only view the |ECOs| related to their responsibilities, whether it involves new product
+   introductions, targeted product line updates, or regulatory compliance fulfillment.
 
 On the |ECO| form, fill in the following fields accordingly:
 
@@ -43,16 +42,24 @@ On the |ECO| form, fill in the following fields accordingly:
 - :guilabel:`Bill of Materials` specifies the changed |BOM|. It auto-populates if the product in
   :guilabel:`Product` field has an existing |BOM|. If multiple |BOMs| exist, select the intended
   radio options from the drop-down menu.
+
+   .. important::
+      A :guilabel:`Product` must be selected before :guilabel:`Bill of Materials` options is
+      available.
+
 - :guilabel:`Company` field is used in multi-company databases. Specify if the change applies to
   products in a specific company, or leave blank if the change applies to all companies.
+
+   .. note::
+      `Company` is only available to specify with multiple companies enabled. See
+      :doc:`../../../general/multi_company`.
+
 - :guilabel:`Responsible` represents the assignee in charge of this |ECO|. (Optional)
 - :guilabel:`Effective` specifies when the |ECO| becomes live. Choosing :guilabel:`As soon as
   possible` means the |ECO| applies to the production |BOM| as soon as an authorized user
-  :ref:`applies the changes <plm/eco/apply-changes>`.
-
-  On the other hand, choosing :guilabel:`At Date`, and setting a specific date, leaves a date that
-  makes it easier to track the version history of the |BOM|, and the specific date |BOMs|, used for
-  production.
+  :ref:`applies the changes <plm/eco/apply-changes>`. :guilabel:`At Date` with a specific date
+  selected will only apply the |BOM| at that date, making it easier to track the version history of
+  the |BOM| in production.
 - :guilabel:`Tags` are assigned to |ECOs| for prioritization and organization. Create a new tag by
   typing the name in the field and selecting :guilabel:`Create` from the drop-down menu. (Optional)
 
@@ -61,7 +68,7 @@ the changes.
 
 By pressing :guilabel:`Start Revision`, three actions occur:
 
-#. The :guilabel:`Documents` smart button appears, storing relevant files of the |BOM|.
+#. The :guilabel:`Documents` smart button appears, storing the relevant files of the |BOM|.
 #. A copy of the production |BOM| is stored in the newly-appeared :guilabel:`Revision` smart button
    of the |ECO|. The next available version number (e.g., `V2`, `V3`, ...) is also assigned to keep
    track of all |BOM| versions.
@@ -73,7 +80,6 @@ By pressing :guilabel:`Start Revision`, three actions occur:
    Revision` button has been pressed.
 
 .. image:: engineering_change_orders/eco-form.png
-   :align: center
    :alt: ECO with overview of stages in the top-right corner, and *Revision* smart button.
 
 Change components
@@ -89,7 +95,6 @@ the current version, by flagging the test |BOM| with a large :guilabel:`Archived
    Doing so opens the archived |BOM|, marked with a large red :guilabel:`Archived` flag.
 
    .. image:: engineering_change_orders/archived-bom.png
-      :align: center
       :alt: Show the archived Bill of Materials.
 
 On the new |BOM|, in the :guilabel:`Components` tab, proceed to modify the components list, by
@@ -103,15 +108,20 @@ changing the :guilabel:`Quantity` of existing components, adding new components 
    additional component, `Stabilizers`, is added.
 
    .. image:: engineering_change_orders/version-2-bom.png
-      :align: center
       :alt: Make changes to components by going to the new BoM with the *Revision* smart button.
 
 Compare changes
 ---------------
 
-Once the changes are complete, navigate back to the |ECO|, by clicking `ECO00X` in the breadcrumbs
-located in the top-left corner. On the |ECO| form, a new :guilabel:`BoM Changes` tab displays the
-differences between the current |BOM| and the new version.
+To compare a revised |BOM| to the previous version, navigate to the |ECO| for that |BOM| in either
+of these ways:
+
+#. From the revised |BOM|, click the |ECO| name (for example, `ECO005: Improve...`) in the
+   breadcrumbs located in the top-left corner.
+#. From the :guilabel:`PLM Overview`,  select the |ECO| type in the :guilabel:
+
+On the |ECO| form, a new :guilabel:`BoM Changes` tab displays the differences between the current
+|BOM| and the new version.
 
 Blue text indicates new components added to the revised |BOM| that are not in the production |BOM|.
 Black text represents updates shared by both |BOMs|, while red text indicates components removed in
@@ -125,7 +135,6 @@ used in production. That is, until the :ref:`changes are applied <plm/eco/apply-
    :guilabel:`BoM Changes` tab of the |ECO|.
 
    .. image:: engineering_change_orders/bom-changes.png
-      :align: center
       :alt: View summary of component changes in the *BoM Changes* tab.
 
 Change operations
@@ -152,8 +161,12 @@ clicking the :guilabel:`Archive Operation` button.
 Compare changes
 ---------------
 
-Once the changes are complete, navigate back to the |ECO|, by clicking `ECO00X` in the breadcrumbs
-located in the top-left corner.
+To compare a revised operations to the previous version, navigate to the |ECO| for the |BOM| in
+either of these ways:
+
+#. From the revised |BOM|, click the |ECO| name (for example, `ECO005: Improve...`) in the
+   breadcrumbs located in the top-left corner
+#. From the :guilabel:`PLM Overview`,  select the |ECO| type in the :guilabel:
 
 On the |ECO| form, a new :guilabel:`Operation Changes` tab displays the differences between the
 current production |BOM| and the new version.
@@ -182,7 +195,6 @@ reflect the following information:
    it.
 
    .. image:: engineering_change_orders/instructions-smart-button.png
-      :align: center
       :alt: Show *Instructions* smart button to check whether an operation has additional
             instructions.
 
@@ -212,7 +224,6 @@ reflect the following information:
       provides additional assembly details.
 
    .. image:: engineering_change_orders/operation-changes.png
-      :align: center
       :alt: Show *Operation Changes* tab in an |ECO|.
 
 .. _plm/eco/apply-changes:
@@ -231,7 +242,7 @@ archives the original production |BOM|, and the revised |BOM| becomes the new pr
 Verify changes
 --------------
 
-To ensure the changes are live, from the |ECO| where the :guilabel:`Apply Changes` button was just
+To ensure the changes are live, from the |ECO| where the :guilabel:`Apply Changes` button was
 pressed, return to the revised |BOM| by clicking the :guilabel:`Revision` smart button.
 
 On the revised |BOM|, the large red :guilabel:`Archived` flag is removed.
@@ -251,8 +262,7 @@ latest |ECO|.
    :guilabel:`Revision` smart button of the |ECO|.
 
    .. image:: engineering_change_orders/bom-version.png
-      :align: center
-      :alt: View current *BOM* version in the Miscellaneous tab.
+      :alt: View current *BOM* version in the *Miscellaneous* tab.
 
 .. _plm/eco/tablet-view:
 
@@ -260,12 +270,12 @@ Create ECO from tablet view
 ===========================
 
 Operators can directly suggest clearer operation instructions, while performing manufacturing orders
-(MOs) in the *Manufacturing* app.
+(MOs) in the **Manufacturing** app.
 
 To create |ECOs| in this manner, begin by navigating to :menuselection:`Manufacturing app -->
 Operations --> Manufacturing Orders`. Then, select the desired :abbr:`MO (Manufacturing Order)` and
-switch to the :guilabel:`Work Orders` tab. Then, click the :guilabel:`📱 (mobile phone)` icon for
-the desired work order to open the *tablet view* of the operation.
+switch to the :guilabel:`Work Orders` tab. Then, click the :guilabel:`📱 (mobile phone)` icon for the
+desired work order to open the *tablet view* of the operation.
 
 .. important::
    The :guilabel:`📱 (mobile phone)` icon is **only** available for :abbr:`MOs (Manufacturing
