@@ -77,24 +77,45 @@ Invoices` to have a detailed list of the overdue invoices.
 
 Additional options can be set:
 
-- :guilabel:`Reminders`: :guilabel:`Automatic` or :guilabel:`Manual`.
+- :guilabel:`Reminders`: These are either :guilabel:`Automatic` or :guilabel:`Manual`.
 - :guilabel:`Next reminder`: The date by which the next follow-up actions should be taken is
   automatically set when follow-ups are processed, but can be manually adjusted if needed.
-- :guilabel:`Responsible`:  The user handling follow-up actions, who is automatically added as a
-  follower in the chatter.
+- :guilabel:`Responsible`: The user who handles the follow-up actions.
 
 To manually send a payment reminder to a customer, click :guilabel:`Send` and select the actions in
 the :guilabel:`Send and Print` window:
 
+<<<<<<< 613d6efdea51ea3e66e2f25b212786a3c83522bd
 - :guilabel:`Print`;
 - :guilabel:`Email`;
 - :guilabel:`WhatsApp`;
 - :guilabel:`Sms`;
 - :guilabel:`By post`.
+||||||| ab9717eab0873879b52ee32ba4551c6f37ebfe62
+- :guilabel:`Print`;
+- :guilabel:`Email`;
+- :guilabel:`Sms`;
+- :guilabel:`By post`.
+=======
+- :guilabel:`Print`
+- :guilabel:`Email`
+- :guilabel:`Sms`
+- :guilabel:`By post`
+>>>>>>> a0d01d54f66f54b46ad126caf5a3c1eb97228d31
 
+<<<<<<< 613d6efdea51ea3e66e2f25b212786a3c83522bd
 Enable the :guilabel:`Attach Invoices` option, and change the :guilabel:`Content Template`,
 :guilabel:`WhatsApp Template`, or :guilabel:`Phone` if needed. Then, click :guilabel:`Send` or
 :guilabel:`Send & Print`.
+||||||| ab9717eab0873879b52ee32ba4551c6f37ebfe62
+Enable the :guilabel:`Attach Invoices` option and change the :guilabel:`Content Template` if needed.
+Then, click :guilabel:`Send` or :guilabel:`Send & Print`.
+=======
+Enable the :guilabel:`Attach Invoices` option and change the :guilabel:`Content Template` if needed.
+Then, click :guilabel:`Send` or :guilabel:`Send & Print` to send the :ref:`follow-up report
+<accounting/follow_up/follow-up-report>`.
+
+>>>>>>> a0d01d54f66f54b46ad126caf5a3c1eb97228d31
 
 .. seealso::
    :doc:`/applications/essentials/in_app_purchase`
@@ -116,12 +137,18 @@ Customers`. In the :guilabel:`Customers` kanban view, click the search bar and f
 
 To take follow-up actions for all relevant customers, switch to the list view and select the
 customers requiring follow-up. Then, click :icon:`fa-cog` :guilabel:`(Actions)` and select
-:guilabel:`Process Follow-ups`.
+:guilabel:`Process Follow-ups` to send them the :ref:`follow-up report
+<accounting/follow_up/follow-up-report>`.
+
+.. _accounting/follow_up/reports:
+
+Reports
+=======
 
 .. _accounting/follow_up/customer-statement:
 
 Customer statement
-==================
+------------------
 
 To get a comprehensive overview of a customer's account status, click the :guilabel:`Customer
 Statement` smart button on the customer's form. This statement corresponds to the :ref:`Partner
@@ -133,5 +160,21 @@ and click :guilabel:`Print & Send`.
 To view the customer statements for multiple customers at once, select the customers from the
 :guilabel:`Customers` list view, click :icon:`fa-cog` :guilabel:`(Actions)`, and select
 :guilabel:`Open Customer Statements`.
+
+Click :guilabel:`PDF` or :guilabel:`XLSX` to generate a PDF or XLSX file, respectively.
+
+.. _accounting/follow_up/follow-up-report:
+
+Follow-up report
+----------------
+
+To get a complete overview of a customer's due invoices, separating those that are due from those
+that are overdue, click the :ref:`Customer Statement <accounting/follow_up/customer-statement>`
+smart button on the customer's form. Then, click :icon:`fa-book` :guilabel:`Report: Customer
+Statement` and select :guilabel:`Follow-Up Report`.
+
+To view the follow-up report for all customers at once, go to :menuselection:`Accounting -->
+Reporting --> Partner Ledger`. Then, click :icon:`fa-book` :guilabel:`Report:` and select
+:guilabel:`Follow-Up Report`.
 
 Click :guilabel:`PDF` or :guilabel:`XLSX` to generate a PDF or XLSX file, respectively.
