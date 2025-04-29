@@ -1,4 +1,9 @@
-# Odoo documentation
+# 📘 Odoo 17 Converge Modules Documentation
+
+Welcome! This repository contains a curated, cherry-picked selection of documentation for **Odoo 17**, focusing specifically on the **Converge** modules.
+
+Whether you're here to read, build, or contribute—this guide has you covered.
+
 
 ## Build the documentation locally
 
@@ -11,7 +16,7 @@
 - A local copy of the [odoo/odoo repository](https://github.com/odoo/odoo) (optional)
 - A local copy of the [odoo/upgrade-util repository](https://github.com/odoo/upgrade-util) (optional)
 
-### Instructions
+## 🚀 Getting Started
 
 1. In a terminal, navigate to the root directory of the documentation and build it `make`.
    Additional commands are available with `make help`.
@@ -23,13 +28,20 @@ Optional: place your local copy of the `odoo/odoo` and `odoo/upgrade-util` repos
 the parent directory or in the root directory of the documentation to build the latter
 with the documented Python docstrings.
 
-## Contribute to the documentation
 
-For contributions to the content of the documentation, please refer to the
-[Introduction Guide](https://www.odoo.com/documentation/latest/contributing/documentation.html).
+## 🛠️ Editing the Layout
+To customize the look and feel of the documentation (such as headers, structure, or layout components), you can modify the layout templates located at:
 
-To **report a content issue**, **request new content** or **ask a question**, use the
-[repository's issue tracker](https://github.com/odoo/documentation/issues).
+`extensions/odoo_theme/layout_templates/`
+
+These templates are written using Jinja2 and HTML, and control the overall structure of the generated pages.
+
+## 📄 Notes
+
+This documentation is built using Sphinx.
+Make sure to install the required dependencies (if any) using:
+
+`pip install -r requirements.txt`
 
 ## Learn More
 

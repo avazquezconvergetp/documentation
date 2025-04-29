@@ -1,0 +1,26 @@
+# Base Python image
+FROM python:3.11-slim
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    make \
+    git \
+    && apt-get clean
+
+# Install Sphinx and themes (customize as needed)
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+# Set working directory
+WORKDIR /app
+
+# Copy your documentation into the container
+COPY . /app
+
+# Build the documentation
+RUN make html
+
+# Serve the docs using Python's HTTP server
+WORKDIR /app/_build/html
+CMD ["python3", "-m", "http.server", "8000"]
