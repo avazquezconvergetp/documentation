@@ -4,7 +4,6 @@ Welcome! This repository contains a curated, cherry-picked selection of document
 
 Whether you're here to read, build, or contribute—this guide has you covered.
 
-
 ## Build the documentation locally
 
 ### Requirements
@@ -28,8 +27,8 @@ Optional: place your local copy of the `odoo/odoo` and `odoo/upgrade-util` repos
 the parent directory or in the root directory of the documentation to build the latter
 with the documented Python docstrings.
 
-
 ## 🛠️ Editing the Layout
+
 To customize the look and feel of the documentation (such as headers, structure, or layout components), you can modify the layout templates located at:
 
 `extensions/odoo_theme/layout_templates/`

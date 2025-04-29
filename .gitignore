@@ -2,6 +2,8 @@
 *.mo
 .*
 !.gitattributes
+LICENSE
+COPYRIGHT
 
 # Sphinx build files
 _build/
